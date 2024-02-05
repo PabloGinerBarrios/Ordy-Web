@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://es.allfont.net/allfont.css?fonts=droid-serif" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="contenedor_header">
+            <div class="logos_izq">
+                <P>Life Style Exclusive Hotel</P>
+                <a href="#" class="link_izq">Promociones</a>
+                <a href="#" class="link_izq">Tienda Online</a>
+            </div>
+            <img class="logo" src="./media/Logo.png" alt="logo">
+            <div class="logos_drch">
+                <p>654 321 698 - 961 478 523</p>
+                <a href="#" class="english">English</a>
+                <a href="localizacion.html" class="loca">Localización</a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="home"><a href="index.html">HOME</a></li>
+                    <li class="habitaciones"><a href="habitaciones.html">HABITACIONES</a></li>
+                    <li class="contacto">CONTACTO</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main_contacto">
+        <section class="texto_cuerpo texto_contacto">
+            <h2 id="retorno" class="bienvenidos">Pasa más información</h2>
+            <h1 class="energy_house">CONTÁCTANOS</h1>
+            <P class="parrafo_index">Para ampliar información sobre alguno de nuestros servicios, pedir alguna cita  oreservar en nuestro restaurante,
+                no dudes en ponerte en contacto con nosotros. <br>¡Te esperamos!</P>
+        </section>
+        <form action="#" method="POST">
+            <div class="form_nombre">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" pattern="[a-zA-Z]{3,}" placeholder="Mínimo 3 letras" required>
+            </div>
+            <div class="form_ciudad">
+                <label for="ciudad">Ciudad <span class="form_opcional">Opcional</span></label>
+                <input type="text" id="ciudad" name="ciudad" pattern="[a-zA-Z]{3,}" placeholder="Mínimo 3 letras">
+            </div>
+            <div class="form_email">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="yyyy@xxxx.com" required>
+            </div> 
+            <div class="form_telefono">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[6-9][0-9]{8}" placeholder="Introduce 9 números" required>
+            </div> 
+            <div class="form_asunto">
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" pattern=".{1,50}" required>
+            </div>
+            <div class="form_consulta">
+                <label for="consulta">Consulta</label>
+                <textarea name="consulta" id="consulta" cols="30" rows="10" required></textarea>
+            </div>
+            <div class="form_contrato">
+                <input type="checkbox" id="contrato" required>
+                <label for="contrato">He leído y acepto la política de privaciddad y los términos legales.</label>
+            </div>
+            <input type="submit" value="Enviar" class="form_boton">
+        </form>
+        <div class="seccion_tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Información Básica sobre Protección de datos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Responsable: </td>
+                        <td>Ordi, A Better Life, S.L.</td>
+                    </tr>
+                    <tr>
+                        <td>Finalidad: </td>
+                        <td>Atender su solicitud.</td>
+                    </tr>
+                    <tr>
+                        <td>Legitimación: </td>
+                        <td>Ejecución de un contrato.</td>
+                    </tr>
+                    <tr>
+                        <td>Destinatarios: </td>
+                        <td>No se cederán datos a terceros, salvo obligación legal.</td>
+                    </tr>
+                    <tr>
+                        <td>Derechos: </td>
+                        <td>Tiene derehco a acceder, rectificar y suprimir los datos, así como otros derehcos, indicados en la información adicional, que puede 
+                            ejercer dirigiéndose a Les Molines, 2-03450 Banyeres de Mariola
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Más información en nuestra política de privacidad.</p>
+        </div>
+        <ul class="informacion">
+            <li class="energy_house titulo">CONTÁCTANOS EN:</li>
+            <li class="parrafo_index">(+34) 665485699</li>
+            <li class="parrafo_index">(+34) 949539499</li>
+            <li class="parrafo_index">infor@ordi.es</li>
+            <li><img src="./media/solo-adultos_es.png" alt="Solo adultos"></li>
+            <li class="energy_house titulo">HORARIO DE RECEPCIÓN</li>
+            <li class="parrafo_index">Lunes a Jueves</li>
+            <li class="parrafo_index">de 9:30 a 22:30h</li>
+            <li class="parrafo_index">Viernes a Domingo</li>
+            <li class="parrafo_index">de 8:30 a 22:30h</li>
+            <li class="energy_house titulo">SÍGUENOS EN:</li>
+            <li>
+                <div>
+                    <a href="https://es-es.facebook.com/" target="_blank"><img class="imagen_info" src="./media/ico-facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img class="imagen_info" src="./media/ico-instagram.png" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img class="imagen_info" src="./media/ico-youtube.png" alt="YouTube"></a>
+                </div>
+            </li>
+            <li class="energy_house titulo">INFORMACIÓN DE INTERÉS</li>
+            <li><a href="localizacion.html" class="parrafo_index">¿Cómo llegar?</a></li>
+            <li><a href="habitaciones.html#actividades" class="parrafo_index">Ver actividades</a></li>
+            <li><a href="#" class="parrafo_index">Preguntas frecuentes</a></li>
+            <li><a href="#" class="parrafo_index">Ver testimonios</a></li>
+        </ul>
+        <div class="subform parrafo_index">
+            <p><span>ORDI, THE ENERGY HOUSE</span> | Yellowstone, Wyoming 82190, EE. UU.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor_footer">
+            <img class="logo_transparente" src="./media/Logo_trans.png" alt="logo transparente">
+            <div class="yellowstone">
+                <p>Yellowstone, Wyoming 82190, EE.UU. <br>
+                T.(+34) 669 558 447 T.(+34)963 852 741 <br>
+                info@ordi.es</p>
+                <img src="./media/solo-adultos_es.png" alt="Solo adultos">
+            </div>
+            <div class="traveller">
+                <img class="ico-traveller" src="./media/sello-traveller-footer.png" alt="Sello traveller">
+                <img class="ico-ruralka" src="./media/logo-hotelero-ruralka.png" alt="Logo hotelero">
+            </div>
+            <a class="como_llegar" href="localizacion.html">¿Cómo llegar?</a>
+            <div class="iconos_redes">
+                <a href="https://es-es.facebook.com/" target="_blank"><img src="./media/ico-facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="./media/ico-instagram.png" alt="Instagram"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="./media/ico-youtube.png" alt="YouTube"></a> 
+            </div>    
+        </div>
+        <div class="nombre">
+            <p>Actividad realizada para el módulo de lenguajes de marcas. Curso 2022-2023. Pablo Giner Barrios</p>
+        </div>
+    </footer>
+</body>
+</html>

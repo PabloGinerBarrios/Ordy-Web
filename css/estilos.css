@@ -1,0 +1,1431 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 50% 1fr;
+    grid-template-rows: 200px 1fr 300px;
+    grid-template-areas: 
+        "main main main"
+        "main main main"
+        "footer footer footer";
+    font-family: 'Droid Serif', serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    z-index: 500;
+    font-family: 'Oswald', 'sans-serif';
+}
+
+.contenedor_header {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 80px 80px 40px;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-areas: 
+            ". logo logo logo ."
+            "logos_izq logo logo logo logos_drch"
+            "nav nav nav nav nav";
+    
+    font-family: 'Oswald', sans-serif;
+}
+
+.logos_izq {
+    grid-area: logos_izq;
+    font-size: 0.7rem;
+    color: black;
+}
+
+.logos_izq > p {
+    font-family: 'Playfair Display', serif;
+}
+
+.logos_izq a {
+    padding-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.link_izq {
+    
+    background-image: url(../media/ico-shop.png);
+    background-repeat: no-repeat;
+
+}
+
+.logo {
+    grid-area: logo;
+    background-image: url(../media/Logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    max-width: 350px;
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+}
+
+.logos_drch {
+    font-size: 0.7rem;
+    grid-area: logos_drch;
+    justify-self: end;
+}
+
+.logos_drch a {
+    padding-left: 20px;
+}
+
+.english {
+    background-image: url(../media/ico-lang.png);
+    font-size: 11px;
+}
+
+.loca {
+    background-image: url(../media/ico-loc.png);
+    font-size: 11px;
+}
+
+.english, .loca {
+    background-repeat: no-repeat;
+    background-position: left;
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: flex;
+    border-top: 1px solid black;
+    width: 100%;
+    height: 40px;
+    grid-area: nav;
+}
+
+nav a {
+    text-decoration: none;
+    color: darkgray;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+}
+
+.home {
+    grid-area: home;
+}
+
+.habitaciones {
+    grid-area: habitaciones;
+}
+
+.contacto {
+    grid-area: contacto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_index {
+    grid-area: main;
+    background-image: url("../media/hotel.png");
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.contenedor_transparente {
+    width: 100%;
+    margin-top: 200px;
+    position: relative;
+    padding: 100px 100px 0 100px;
+}
+
+.contenedor_transparente::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 40px black inset;
+}
+
+.avisos {
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: white;
+    max-width: 600px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 3px 3px 20px grey;
+    font-family: 'Oswald', sans-serif;
+}
+
+.aviso {
+    font-weight: bold;
+}
+
+.sello_traveller {
+    width: 180px;
+    margin: 100px 0 20px 20%;
+}
+
+.cuerpo {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 50%;
+    margin: 30px 0 0;
+}
+
+.texto_cuerpo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    margin: 30px 0 40px;
+}
+
+.bienvenidos {
+    font-family: 'Playfair Display', serif;
+    margin-top: 70px;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.energy_house {
+    font-family: 'Oswald', sans-serif;
+    font-size:4rem;
+    font-weight:300;
+    text-transform: uppercase;
+}
+
+.parrafo_index {
+    text-align: center;
+    font-family: 'Droid Serif', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+    line-height: 1.5;
+
+}
+
+.texto_cuerpo p:first-child {
+    margin-bottom: 10px;
+}
+
+.texto_cuerpo p:last-child {
+    margin-bottom: 100px;
+}
+
+.imagenes {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+    flex-wrap: wrap;
+}
+
+.imagen {
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid grey;
+    margin-bottom: 60px;
+}
+
+.imagen>img {
+    width: 100%;
+    position: absolute;
+    top: -25%;
+}
+
+.imagen>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    background-color: white;
+    padding: 5px 10px 10px;
+    height: 50%;
+}
+
+.imagen>div h2 {
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-weight:400;
+    font-size: 1.25rem;
+}
+
+.imagen>div a {
+    position: absolute;
+    bottom: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.imagen>div a:hover {
+    text-decoration: underline;
+}
+
+.ocultis {
+    display: none;
+}
+
+.link-oculto {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ocultis:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.79);
+    z-index: 999;
+    position: absolute;
+}
+
+.ocultis img, .ocultis video {
+    position: absolute;
+    top: 30vh;
+}
+
+.main_habitaciones {
+    grid-area: main;
+    background-image: url(../media/habitaciones.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.trans_habitaciones {
+    height: 462px;
+}
+
+.contenedor_video {
+    border: 1px solid darkgray;
+    border-radius: 4px;
+}
+
+.contenedor_video video {
+    width: 35%;
+    float: left;
+}
+
+.parrafo_video {
+    width: 65%;
+    height: 100%;
+    float: right;
+    text-align: center;
+}
+
+.parrafo_video h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin: 20px 0 10px;
+}
+
+.parrafo_video p {
+    font-size: 0.9rem;
+    padding: 10px 10%;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+.galerias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galerias>div {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    width: 100%;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.galeria p:first-child {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+}
+
+.galeria p:last-child {
+    font-size: 1.62rem;
+    font-weight: bold;
+}
+
+.galerias img {
+    width: 100%;
+}
+
+.actividades {
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-rows: 30px auto;
+    grid-template-areas:". actividades ." 
+                        ". act .";
+    width: 100%;
+}
+
+.actividades h3 {
+    grid-area: actividades;
+    text-align: center;
+    font-size: 1.83rem;
+    font-weight: bold;
+}
+
+.actividades>div {
+    grid-area: act;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+                        "act1 act2 act3"
+                        "act4 act2 act5";
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 100%;
+    height: 750px;
+    margin: 30px 0 40px;
+}
+
+.anime1 {
+    grid-area: act1;
+}
+
+.anime2 {
+    grid-area: act2;
+}
+
+.anime3 {
+    grid-area: act3;
+    position: relative;
+}
+
+.anime4 {
+    grid-area: act4;
+    position: relative;
+}
+
+.anime5 {
+    grid-area: act5;
+}
+
+.act {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 3px 3px 20px gray;
+}
+
+.actividades>div div {
+    border-radius: 9px;
+    transition: .5s;
+}
+
+.actividad1 img {
+    width: 100%;
+    filter: sepia(100%);
+}
+
+.anime1:hover .actividad1 {
+    transform: scale(0.5);
+}
+
+.actividad2 {
+    filter: blur(3px);
+}
+
+.actividad2 img {
+    height: 100%;
+    position: absolute;
+    left: -30%;
+}
+
+.anime2:hover .actividad2 {
+    transform: scale(.6) rotate(20deg);
+    filter: none;
+}
+
+.actividad3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.actividad3 img {
+    height: 100%;
+    filter: grayscale(100%);
+    position: absolute;
+    left: -180px;
+}
+
+.anime3:hover .actividad3 {
+    transform: translateX(4em);
+}
+
+.actividad4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.actividad4 img {
+    width: 100%;
+}
+
+.anime4:hover .actividad4 {
+    transform: scale(1.5);
+}
+
+.actividad5 img {
+    height: 100%;
+    filter: sepia(100%);
+    transform: translate(-35px, 0);
+}
+
+.anime5:hover .actividad5 {
+    transform: scale(1.5) skewY(15deg) rotate(360deg);
+}
+
+.seccion_evento {
+    display: flex;
+    border: 1px solid darkgray;
+}
+
+.seccion_evento img {
+    width: 30%;
+}
+
+.seccion_evento div {
+    width: 70%;
+    text-align: center;
+    font-family: 'Droid', sans-serif;
+    padding: 20px 5px;
+}
+
+.seccion_evento h3 {
+    font-size: 1.25rem;
+    color: darkgray;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.seccion_evento p {
+    font-size: 0.93rem;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.seccion_habitaciones {
+    font-size: 21px;
+}
+
+.seccion_habitaciones>div {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid darkgray;
+}
+
+.seccion_habitaciones>div div {
+    text-align: center;
+    width: 50%;
+    color: darkgray;
+}
+
+.seccion_habitaciones h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight:lighter;
+    margin: 40px 0 30px;
+}
+
+.seccion_habitaciones h4 {
+    font-family: 'Droid Serif', serif;
+    font-style: italic;
+    font-size: 0.7em;
+    margin-bottom: 15px;
+    font-variant: small-caps;
+}
+
+.seccion_habitaciones p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7em;
+    padding: 10px 20px;
+}
+
+.habitacion_imagen {
+    position: relative;
+}
+
+.habitacion_imagen img {
+    width: 100%;
+    height: 100%;
+}
+
+.habitacion_imagen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0 0 40px black;
+
+}
+
+.habitacion_imagen:hover {
+    animation: rebote 1.3s infinite ease-out;
+}
+
+.servicios {
+    margin-bottom: 40px;
+}
+
+.servicios img {
+    opacity: 80%;
+    width: 45px;
+    margin-bottom: 20px;
+}
+
+.servicios h2 {
+    font-size: 1.62rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.servicios>div {
+    font-size: 0.87rem;
+    width: 100%;
+    height: 260px;
+    margin: 30px 0;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.servicios>div div {
+    float: left;
+    width: 20%;
+    height: 130px;
+    text-align: center;
+}
+
+.servicios>p {
+    font-size: 0.87rem;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.servicios>p span {
+    text-decoration: underline;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.main_contacto {
+    padding: 64px 32px;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 200px 200px 500px 400px 50px;
+    grid-template-areas: 
+                        ". ."
+                        "texto_contacto texto_contacto"
+                        "form informacion"
+                        "tabla informacion"
+                        "subform subform";
+    column-gap: 40px;
+    row-gap: 64px;
+}
+
+.texto_contacto {
+    grid-area: texto_contacto;
+    justify-self: center;
+    width: 80%;
+}
+
+main form {
+    grid-area: form;
+    height: 500px;
+    max-width: 640px;
+    width: 100%;
+    justify-self: end;
+    display: grid;
+    grid-template-areas: 
+                "nombre nombre ciudad ciudad"
+                "email email telefono telefono"
+                "asunto asunto asunto asunto"
+                "consulta consulta consulta consulta"
+                "consulta consulta consulta consulta"
+                "contrato contrato contrato boton";
+    column-gap: 40px;
+    row-gap: 24px;
+    border-right: 1px solid black;
+    padding-right: 40px;
+}
+
+input {
+    height: 32px;
+    width: 100%;
+}
+
+label {
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form_nombre {
+    grid-area: nombre;
+}
+
+.form_ciudad {
+    grid-area: ciudad;
+}
+
+.form_opcional {
+    color: gray;
+    font-style: italic;
+}
+
+.form_email {
+    grid-area: email;
+}
+
+.form_telefono {
+    grid-area: telefono;
+}
+
+.form_asunto {
+    grid-area: asunto;
+}
+
+.form_consulta {
+    grid-area: consulta;
+}
+
+textarea {
+    width: 100%;
+}
+
+.form_contrato {
+    grid-area: contrato;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.form_contrato input {
+    width: 15px;
+    margin-bottom: 5px;
+}
+
+.form_contrato label {
+    margin-left: 5px;
+}
+
+.form_boton {
+    grid-area: boton;
+}
+
+.seccion_tabla {
+    grid-area: tabla;
+    justify-self: end;
+    max-width: 640px;
+    width: 100%;
+    border-right: 1px solid black;
+    padding-right: 40px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.seccion_tabla p {
+    margin-top: 10px;
+}
+
+td, th {
+    border: 1px solid #333;
+    padding: 8px;
+}
+
+.informacion {
+    grid-area: informacion;
+    align-self: flex-start;
+    width: 100%;
+    list-style: none;
+}
+
+.informacion li {
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+.informacion a {
+    text-decoration: none;
+    color: black;
+}
+
+ul .titulo {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    padding: 0 0 20px;
+}
+
+.imagen_info {
+    width: 7%;
+}
+
+.subform {
+    grid-area: subform;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "frasecita .";
+    column-gap: 40px;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    height: 40px;
+}
+
+.subform p {
+    grid-area: frasecita;
+    justify-self: end;
+    padding-right: 60px;
+    align-self: center;
+}
+
+.subform span {
+    font-weight: bold;
+    font-family: 'Droid Serif';
+}
+
+.main_loca {
+    grid-area: main;
+    margin: 300px 0 100px;
+    
+}
+
+.seccion_mapa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 768px;
+}
+
+.seccion_mapa iframe {
+    border-radius: 10px 50% 10px 50%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 3px;
+}
+
+.cuadro_info {
+    width: 320px;
+    height: 240px;
+    border: 1px solid darkgray;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.cuadro_info h4 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 20px 0 10px;
+}
+
+.lista_estilo {
+    list-style: disc;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7rem;
+    padding-left: 25px;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.lista_estilo ul {
+    list-style: none;
+    font-weight: 400;
+    margin: 5px 50px;
+}
+
+.lista_estilo ul li {
+    margin: 5px 0;
+}
+
+.lista_estilo ul li:last-child {
+    margin-bottom: 10px;
+}
+
+.cuadro_info p:nth-child(3) {
+    font-size: 0.9rem;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.cuadro_info p:last-child {
+    font-style: italic;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7rem;
+}
+
+.cuadro_info span {
+    font-weight: bold;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightgrey;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 50% 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: 
+            ". contenedor_footer ."
+            ". contenedor_footer ."
+            ". contenedor_footer ."
+            ". curso .";
+}
+
+.contenedor_footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-area: contenedor_footer;
+    width: 100%;
+    grid-template-areas: 
+            "logo_trans yellowstone traveller traveller"
+            "como_llegar . . iconos_redes";
+    padding: 3% 0% 1%;
+    
+}
+
+.logo_transparente {
+    max-width: 230px;
+    width: 100%;
+    grid-area: logo_trans;
+}
+
+.yellowstone {
+    margin-left: 10px;
+    font-size: 0.75rem;
+    grid-area: yellowstone;
+}
+
+.traveller {
+    grid-area: traveller;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ico-traveller {
+    max-width: 90px;
+    width: 100%;
+    margin-right: 3%;
+}
+.ico-ruralka {
+    max-width: 150px;
+    width: 100%;
+}
+
+.como_llegar {
+    grid-area: como_llegar;
+    padding: 0 0 0 45%;
+    font-size: 0.9rem;
+}
+
+.iconos_redes {
+    grid-area: iconos_redes;
+    align-items: center;
+    display: flex;
+    max-width: 160px;
+    width: 100%;
+    justify-self: end;
+    align-self: end;
+    justify-content: flex-end;
+}
+
+.iconos_redes > a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 45px;
+    justify-self: end;
+    align-self: end;
+}
+
+.iconos_redes > a > img {
+    max-width: 40px;
+    width: 100%;
+}
+
+.nombre {
+    grid-area: curso;
+    font-family: 'Oswald', sans-serif;
+    padding: 10px 0 20px;
+    text-align: center;
+    border-top: 1px solid darkgray;
+}
+
+footer a {
+    color: black;
+    align-self: end;
+}
+
+@keyframes rebote {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% { 
+        transform: translate(0, -10px); 
+    }
+    40% { 
+        transform: translate(0, 5px); 
+    }
+    60% {
+         transform: translate(0, -5px); 
+    }
+    80% {
+         transform: translate(0, 5px); 
+    }
+    100% {
+         transform: translate(0, 0); 
+    }
+}
+
+@media (max-width:1349px) {
+    .imagenes {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width:768px){   
+    body {
+        grid-template-rows: 200px 1fr auto;
+    }
+    .contenedor_header {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 5fr 3fr 2fr;
+        grid-template-areas: 
+                            "logo logo"
+                            "logos_izq logos_drch"
+                            "nav nav";
+        width: 100%;
+    }
+    section {
+        width: 90%;
+    }
+    .avisos {
+        width: 80%;
+    }
+    .sello_traveller {
+        left: 5%;
+    }
+    .logo {
+        width: 100%;
+    }
+    .imagen_oculta {
+        width: 100%;
+    }
+    .texto_cuerpo {
+        width: 100%;
+    }
+    .energy_house {
+        font-size: 2.75rem;
+    }
+    footer {
+        grid-template-columns: 1fr 90% 1fr;
+        grid-template-rows: 3fr 1fr;
+        grid-template-areas: 
+                ". contenedor_footer ."
+                ". contenedor_footer ."
+                ". contenedor_footer ."
+                ". curso .";
+    }
+    .contenedor_footer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-area: contenedor_footer;
+        border-bottom: 1pc solid darkgrey;
+        width: 100%;
+        grid-template-areas: 
+                            "logo_trans traveller"
+                            "yellowstone traveller"
+                            "como_llegar iconos_redes";
+        padding: 3% 0% 1%;
+        border-bottom: 1px solid darkgray;
+        row-gap: 20px;
+    }
+    .traveller {
+        flex-direction: column;
+        justify-content: flex-start;
+        justify-self: end;
+        padding-right: 10px;
+    }
+    .ico-traveller {
+        margin-bottom: 5px;
+    }
+    .yellowstone {
+        align-self: end;
+    }
+    .como_llegar {
+        padding: 0 0 0 20%;
+    }
+    .iconos_redes {
+        padding-right: 10px;
+    }
+    .contenedor_video video {
+        float: none;
+        width: 100%;
+    }
+    .parrafo_video {
+        float: none;
+        width: 100%;
+        height: unset;
+    }
+    .actividades>div {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 40% 20%;
+        grid-template-areas: 
+                            "act1 act3"
+                            "act2 act2"
+                            "act4 act5";
+    }
+    .acttividad1 img {
+        height: 100%;
+    }
+    .actividad2 img {
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
+    .actividad3 img {
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
+    .actividad4 img {
+        height: 100%;
+    }
+    .actividad5 img {
+        transform: unset;
+        width: 100%;
+        height: 100%;
+    }
+    .seccion_habitaciones>div {
+        flex-direction: column;
+    }
+    .seccion_habitaciones>div div {
+        width: 100%;
+    }
+    .main_contacto {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 200px 600px 350px 650px 50px;
+        grid-template-areas: 
+                            "."
+                            "texto_contacto"
+                            "form"
+                            "tabla"
+                            "informacion"
+                            "subform";
+        font-size: 1rem;
+    }
+    main form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+                    "nombre ciudad"
+                    "email telefono"
+                    "asunto asunto"
+                    "consulta consulta"
+                    "consulta consulta"
+                    "contrato boton";
+        height: 600px;
+        border-bottom: 1px solid black;
+        border-right: 0px;
+        padding: 0 0 40px;
+        max-width: 100%;
+        font-size: 1rem;
+        justify-self: center;
+    }
+    
+    .seccion_tabla {
+        max-width: 100%;
+        padding: 0;
+        border-bottom: 1px solid black;
+        border-right: 0px;
+        padding: 0 0 40px;
+    }
+    
+    label {
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .subform {
+        grid-template-areas: "frasecita frasecita";
+        height: 60px;
+    }
+
+    .subform p {
+        padding-right: 0;
+        justify-self: center;
+    }
+    .main_loca {
+        margin: 370px 0 80px;
+        
+    }
+    .seccion_mapa {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 320px;
+        height: 550px;
+    }
+}
+
+@media (max-width:420px) {
+    :root {
+        font-size: 12px;
+    }
+    body {
+        grid-template-rows: auto 1fr auto;
+    }
+    header {
+        height: 320px;
+        position:absolute;
+        top: 0;
+    }
+    .contenedor_header {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 150px 50px 50px 40px;
+        grid-template-areas: 
+                            "logo"
+                            "logos_izq"
+                            "logos_drch"
+                            "nav";
+        row-gap: 10px;
+        width: 100%;
+    }
+    nav {
+        height: 40px;
+    }
+    .logo {
+        width: 100%;
+    }
+    .logos_izq {
+        justify-self: center;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .logos_drch {
+        justify-self: center;
+        font-size: 1rem;
+        text-align: center;
+    }
+    ul {
+        justify-content: unset;
+        align-items: center;
+    }
+    .main_index {
+        background-position-y: 0px;
+        background-position-x: -300px;
+    }
+    .contenedor_transparente {
+        margin-top: 280px;
+        padding: 100px 50px 0;
+    }
+    .sello_traveller {
+        margin: 40px 0 20px 1%;
+    }
+    .energy_house {
+        font-size: 2.5rem;
+    }
+    .parrafo_index {
+        width: 100%;
+    }
+    .texto_cuerpo {
+        width: 100%;
+        height: unset;
+    }
+    .main_habitaciones {
+        background-position-x: -740px;
+    }
+    .seccion_evento {
+        flex-direction: column;
+    }
+    .seccion_evento img {
+        width: 100%;
+    }
+    .seccion_evento div {
+        width: 100%;
+    }
+    .servicios>div div {
+        width: 50%;
+    }
+    .servicios>p {
+        font-size: 1rem;
+    }
+    .main_contacto {
+        margin-top: 70px;
+        row-gap: 30px;
+        grid-template-rows: 200px 200px 700px 400px 600px 50px;
+    }
+    main form {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+                    "nombre"
+                    "ciudad"
+                    "email" 
+                    "telefono"
+                    "asunto"
+                    "consulta"
+                    "consulta"
+                    "contrato"
+                    "boton";
+        height: 700px;
+        border-right: 0px;
+        border-bottom: 1px solid black;
+        padding: 0 0 40px;
+        max-width: 100%;
+        width: 100%;
+        font-size: 1rem;
+        align-self: flex-start;
+    }
+    .informacion li {
+        text-align: center;
+    }
+    .subform {
+        grid-template-columns: 1fr;
+        grid-template-areas: "frasecita";
+    }
+    .subform p {
+        grid-area: frasecita;
+        padding-right: 0px;
+    }
+    
+    .subform span {
+        font-weight: bold;
+        font-family: 'Droid Serif';
+    }
+    footer {
+        height: 600px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr;
+        grid-template-areas: 
+                "contenedor_footer"
+                "contenedor_footer"
+                "contenedor_footer"
+                "curso";
+    }
+    .contenedor_footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,1fr);
+        grid-template-areas: 
+                            "logo_trans"
+                            "traveller"
+                            "yellowstone"
+                            "como_llegar"
+                            "iconos_redes";
+        width: 90%;
+    }
+    .logo_transparente {
+        justify-self: center;
+        align-self: center;
+    }
+    .traveller {
+        justify-self: center;
+        align-self: center;
+    }
+    .yellowstone {
+        justify-self: center;
+        align-self: center;
+    }
+    .como_llegar {
+        justify-self: center;
+        align-self: center;
+        padding-left: 0;
+    }
+    .iconos_redes {
+        justify-self: center;
+        align-self: center;
+    }
+    .iconos_redes a {
+        padding: 3px;
+    }
+}
